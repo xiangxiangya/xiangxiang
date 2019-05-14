@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<stdlib.h>
-My_memcpy(char * str, char * arr,int a)
+My_memcpy(void * str,const void * arr,int a)
 {
 	char *p = str;
 	char *q = arr;
