@@ -31,9 +31,6 @@ int main()
 	char dst[100] = "hello world";
 	my_memmove(dst + 1, dst, strlen(dst) + 1);
 	printf("%s\n",dst);
-
-	my_memmove(dst, dst+1, strlen(dst) + 1);
-	printf("%s", dst);
 	system("pause");
 	return 0;
 }
