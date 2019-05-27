@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<stdlib.h>
-char * My_strncpy(char *str1, char* str2,int n)
+char * My_strncpy(char *str1, char *str2,int n)
 {
 	char *ret = str1;
 	while (*str1 != '\0')
