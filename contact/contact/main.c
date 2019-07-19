@@ -47,6 +47,8 @@ int main()
 			break;
 		case 7:
 			break;
+		case 8:
+			break;
 		case 9:
 			quit = 1;
 			break;

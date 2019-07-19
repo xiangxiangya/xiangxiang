@@ -160,3 +160,47 @@ void SListReverse(SListNode **pphead)//逆置链表(三变量交换指向法）
 	*pphead = pre;
 
 }
+
+
+SListNode* IFSameNode(SListNode*headA, SListNode*headB)//是否有相同的节点
+{
+	SListNode*longerhead = headA;//假设长 的是A
+	SListNode*shorterhead = headB;
+	int lena = 0;
+	int lenb = 0;
+	int gas = 0;
+	int i = 0;
+	SListNode*cur;
+	for (cur = headA; cur; cur = cur->_next)
+	{
+		lena++;
+	}
+	for (cur = headB; cur; cur = cur->_next)
+	{
+		lenb++;
+	}
+	gas = abs(lena - lenb);
+	if (lenb > lena)
+	{
+		longerhead = headB;
+		shorterhead = headA;
+	}
+	for (i = 0; i < gas; i++)
+	{
+		shorterhead = shorterhead->_next;
+	}
+	for (; shorterhead&&longerhead; shorterhead = shorterhead->_next, longerhead = longerhead->_next)
+	{
+		if (shorterhead == longerhead)
+		{
+			return shorterhead;
+		}
+	}
+	return NULL;
+}
+
+SListNode *detectCycle(SListNode*head)
+{
+
+}
+

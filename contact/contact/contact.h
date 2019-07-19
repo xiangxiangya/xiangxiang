@@ -10,7 +10,7 @@
 #define NAME_SIZE 64
 #define TLE_SIZE 16
 #define ADDR_SIZE 128  
-#define LIST_DEFAULT 1
+#define LIST_DEFAULT 1  //通讯录的空间
 #define INC_SIZE 2
 
 typedef struct person
@@ -27,8 +27,7 @@ typedef struct contact
 {
 	int cap;//总容量
 	int size;//当前的大小
-	person_t list[0];
-
+	person_t list[0];//定义柔性数组
 }contact_t, *contact_p,**contact_pp;
 
 

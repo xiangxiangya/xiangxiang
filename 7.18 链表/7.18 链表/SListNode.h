@@ -32,4 +32,7 @@ void SListRemoveAll(SListNode** pphead, SLTDataType x);
 
 void SListReverse(SListNode **pphead);
 void SListDestory(SList* plist);
+
+SListNode* IFSameNode(SListNode*headA, SListNode*headB);
+
 #endif

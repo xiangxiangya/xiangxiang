@@ -1,14 +1,14 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include"contact.h"
 
-static int IsFull(contact_p ct)
+static int IsFull(contact_p ct)//ÅÐ¶ÏÍ¨Ñ¶Â¼ÊÇ·ñÂú
 {
 	return ct->size == ct->cap ? 1 : 0;
 }
 
 static int Inc(contact_pp _ctpp)
 {
-	int new_size = sizeof(contact_t)+((*_ctpp)->cap + INC_SIZE)*sizeof(person_t);
+	int new_size = sizeof(contact_t)+((*_ctpp)->size + INC_SIZE)*sizeof(person_t);
 	contact_p p = realloc(*_ctpp, new_size);
 	if (!p)
 	{
@@ -54,7 +54,7 @@ void AddContact(contact_pp ct)
 {
 	if (!IsFull(*ct) || Inc(ct))
 	{
-		person_p p = &((*ct)->list[(*ct)->size]);
+		person_p p = &((*ct)->list[(*ct)->cap]);
 		printf("Please Enter Name:");
 		scanf(" %s", p->name);
 		printf("Please Enter Sex:");
