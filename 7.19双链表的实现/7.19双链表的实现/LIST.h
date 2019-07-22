@@ -39,6 +39,7 @@ void ListInsertFront(ListNode* pos, LTDataType x);
 void ListPushBack(List* plist, LTDataType x);
 void ListPrint(List* plist);
 
+void ListDistinct(List* plist);
 
-
+void ListMerge(List* plistA, List* plist2);
 #endif

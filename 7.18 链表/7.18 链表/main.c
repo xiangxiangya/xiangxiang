@@ -1,31 +1,80 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+﻿#define _CRT_SECURE_NO_WARNINGS 1
 #include"SListNode.h"
 #include<stdio.h>
 
-int main()
+
+
+int main()//约瑟夫环的测试
 {
+
 	SListNode *head;
+	SListNode*plast;
+	SListNode*cur;
+	SListInit(&head);
+	SListPushFront(&head, 1);
+	plast = head;
+	SListPushFront(&head, 2);
+	SListPushFront(&head, 3);
+	SListPushFront(&head, 4);
+	SListPushFront(&head, 5);
+	plast->_next = head;
+	cur=yuesefu(&head, 3);
+	printf("%d",cur->_data);
+	//SListPrint(head);
 	system("pause");
 	return 0;
 }
 
-int _main()//����IFSameNode
+int ___main()//测试给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 NULL
+{
+	SListNode *head;
+	SListInit(&head);
+	SListPushFront(&head, 1);
+	SListPushFront(&head, 2);
+	SListPushFront(&head,3);
+	SListPushFront(&head, 4);
+	SListPushFront(&head, 5);
+	//head->_next->_next->_next->_next= head->_next->_next;
+	/*SListPrint(head);*/
+	SListNode*tmp = detectCycle(head);
+	if (tmp == NULL)
+	{
+		printf("NULL");
+	}
+	else
+	{
+		printf("%d", tmp->_data);
+	}
+
+	system("pause");
+	return 0;
+}
+
+int __main()//测试IFSameNode
 {
 	SListNode *headA; 
 	SListInit(&headA);
 	SListNode *headB;
 	SListInit(&headB);
-	SListNode *a;
-	SListPushFront(&a, 5);
+	SListNode *headc;
+	SListInit(&headc);
+	SListPushFront(&headc, 1);
+	SListPushFront(&headc, 2);
 	SListPushFront(&headA, 1);
 	SListPushFront(&headA, 2);
 	SListPushFront(&headA, 3);
-	SListPushFront(&a, 5);
+
 	SListPushFront(&headB, 4);
 	SListPushFront(&headB, 5);
+
+
+	headA->_next->_next->_next= headc;//将三个链表连接在一起
+	headB->_next->_next = headc;
+
+
+	//SListPrint(headA);
+	//SListPrint(headB);
 	SListNode *tmp;
-	//tmp=headA->_next->_next->_next;
-	//tmp = headB->_next->_next;
 	tmp=IFSameNode(headA, headB);
 	if (tmp == NULL)
 	{
@@ -41,9 +90,9 @@ int _main()//����IFSameNode
 }
 
 
-int _main()
+int ____main()
 {
-	SListNode *head;//�������������Ƕ���һ���ṹ��ָ��
+	SListNode *head;//链表定义规则就是定义一个结构体指针
 	SListInit(&head);
 	SListPushFront(&head, 1);
 	SListPushFront(&head, 2);
@@ -60,6 +109,7 @@ int _main()
 	//SListEraseAfter(head);
 	/*SListRemoveAll(&head, 3);*/
 	//SListReverse(&head);
+	SListReverse2(&head);
 	SListPrint(head);
 	SListDestory(&head);
 	system("pause");
