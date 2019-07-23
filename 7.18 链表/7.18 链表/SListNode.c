@@ -86,15 +86,15 @@ void SListEraseAfter(SListNode* pos)
 
 void SListDestory(SListNode** pphead)
 {
-	if (*pphead == NULL)
-	{
-		return;
-	}
-	while ((*pphead)->_next)
-	{
-		SListEraseAfter(*pphead);
-	}
-	
+	//if (*pphead == NULL)
+	//{
+	//	return;
+	//}
+	//while ((*pphead)->_next)
+	//{
+	//	SListEraseAfter(*pphead);
+	//}
+	//
 	free(*pphead);
 	*pphead = NULL;
 }

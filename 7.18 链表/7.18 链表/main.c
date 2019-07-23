@@ -3,27 +3,27 @@
 #include<stdio.h>
 
 
-
-int main()//约瑟夫环的测试
-{
-
-	SListNode *head;
-	SListNode*plast;
-	SListNode*cur;
-	SListInit(&head);
-	SListPushFront(&head, 1);
-	plast = head;
-	SListPushFront(&head, 2);
-	SListPushFront(&head, 3);
-	SListPushFront(&head, 4);
-	SListPushFront(&head, 5);
-	plast->_next = head;
-	cur=yuesefu(&head, 3);
-	printf("%d",cur->_data);
-	//SListPrint(head);
-	system("pause");
-	return 0;
-}
+//
+//int main()//约瑟夫环的测试
+//{
+//
+//	SListNode *head;
+//	SListNode*plast;
+//	SListNode*cur;
+//	SListInit(&head);
+//	SListPushFront(&head, 1);
+//	plast = head;
+//	SListPushFront(&head, 2);
+//	SListPushFront(&head, 3);
+//	SListPushFront(&head, 4);
+//	SListPushFront(&head, 5);
+//	plast->_next = head;
+//	cur=yuesefu(&head, 3);
+//	printf("%d",cur->_data);
+//	//SListPrint(head);
+//	system("pause");
+//	return 0;
+//}
 
 int ___main()//测试给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 NULL
 {
@@ -90,7 +90,7 @@ int __main()//测试IFSameNode
 }
 
 
-int ____main()
+int main()
 {
 	SListNode *head;//链表定义规则就是定义一个结构体指针
 	SListInit(&head);
