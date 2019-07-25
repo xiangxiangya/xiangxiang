@@ -94,14 +94,15 @@ int main()
 {
 	SListNode *head;//链表定义规则就是定义一个结构体指针
 	SListInit(&head);
-	SListPushFront(&head, 1);
-	SListPushFront(&head, 2);
-	SListPushFront(&head, 3);
-	SListPushFront(&head, 4);
+	SListPushFront(&head, 20);
+	SListPushFront(&head, 15);
+	SListPushFront(&head, 10);
 	SListPushFront(&head, 5);
-	SListPushFront(&head, 6);
-	SListPushFront(&head, 7);
-	SListPushFront(&head, 8);
+	//SListPushFront(&head, 5);
+	//SListPushFront(&head, 4);
+	//SListPushFront(&head, 3);
+	//SListPushFront(&head, 7);
+	//SListPushFront(&head, 8);
 
 	//SListRemove(&head,3);
 	//SListPopFront(&head);
@@ -109,7 +110,8 @@ int main()
 	//SListEraseAfter(head);
 	/*SListRemoveAll(&head, 3);*/
 	//SListReverse(&head);
-	SListReverse2(&head);
+	//SListReverse2(&head);
+	insert(&head, 50);
 	SListPrint(head);
 	SListDestory(&head);
 	system("pause");

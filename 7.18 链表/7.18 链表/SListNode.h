@@ -36,4 +36,6 @@ SListNode* yuesefu(SListNode **pphead, SLTDataType x);
 
 SListNode* IFSameNode(SListNode*headA, SListNode*headB);
 
+void insert(SListNode **pphead,int n);
+
 #endif

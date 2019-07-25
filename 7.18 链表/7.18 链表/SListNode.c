@@ -272,3 +272,40 @@ SListNode* yuesefu(SListNode **pphead, SLTDataType x)//约瑟夫环
 	return;
 }
 
+
+
+void insert(SListNode **pphead,int n)//将一个数字插入一个有序的链表里
+{
+	SListNode*cur;
+	SListNode*tmp;
+	SListNode*tmp2;
+	tmp2 = *pphead;
+	if (n<tmp2->_data)
+	{
+		SListNode*new = (SListNode*)malloc(sizeof(SListNode));
+		new->_next =*pphead;
+		new->_data = n;
+		*pphead = new;
+		return;
+	}
+	for (cur = *pphead,tmp=*pphead; cur;)
+	{
+		if (n > cur->_data)
+		{
+			tmp =cur;
+			cur=cur->_next;
+		}
+		else
+		{
+			SListNode*new1 = (SListNode*)malloc(sizeof(SListNode));
+			tmp->_next = new1;
+			new1->_data = n;
+			new1->_next = cur;
+			return;
+		}
+	}
+	SListNode*new2 = (SListNode*)malloc(sizeof(SListNode));
+	tmp->_next = new2;
+	new2->_data = n;
+	new2->_next = NULL;
+}
