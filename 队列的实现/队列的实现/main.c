@@ -12,9 +12,9 @@ int main()
 	QueuePush(&test, 6);
 	QueuePush(&test, 7);
 	QueuePop(&test);
-	//QueueFront(&test);
-	QueueBack(&test);
-	//Printf(&test);
+	//6QueueFront(&test);
+	//QueueBack(&test);
+	Printf(&test);
 	//QueueDestory(&test);
 	system("pause");
 	return 0;
