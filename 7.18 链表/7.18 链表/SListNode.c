@@ -309,3 +309,24 @@ void insert(SListNode **pphead,int n)//将一个数字插入一个有序的链�
 	new2->_data = n;
 	new2->_next = NULL;
 }
+
+
+SListNode * Fun(SListNode **pphead, int k)//查找链表倒数第k个元素
+
+{
+	SListNode*cur=*pphead;
+	SListNode*tmp = *pphead;
+
+	int i = 0;
+	int count = 0;
+	for (cur = *pphead; cur; cur = cur->_next)
+	{
+		count++;
+	}
+	for (i = 0; i < count - k; i++)
+	{
+		tmp = tmp->_next;
+	}
+	return tmp;
+
+}

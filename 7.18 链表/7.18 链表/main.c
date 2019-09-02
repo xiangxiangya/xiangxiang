@@ -112,7 +112,13 @@ int main()
 	//SListReverse(&head);
 	//SListReverse2(&head);
 	insert(&head, 50);
+	
+
 	SListPrint(head);
+
+	SListNode * cur = Fun(&head, 3);
+	printf("%d", cur->_data);
+
 	SListDestory(&head);
 	system("pause");
 	return 0;

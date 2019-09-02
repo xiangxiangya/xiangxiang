@@ -38,4 +38,6 @@ SListNode* IFSameNode(SListNode*headA, SListNode*headB);
 
 void insert(SListNode **pphead,int n);
 
+SListNode * Fun(SListNode **pphead, int k);
+
 #endif
