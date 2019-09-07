@@ -25,14 +25,14 @@ int g_a = 0;
 
 int &Add(int x, int y)
 {
-	int c = x + y;
-	return c;
+	int g_a = x + y;
+	return g_a;
 }
 int main()
 {
-	g_a = Add(1, 2);
+	int a = Add(1, 2);
 	Add(4, 5);
-	cout << g_a << endl;
+	cout << a << endl;
 	system("pause");
 	return 0;
 }
