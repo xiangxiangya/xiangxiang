@@ -108,7 +108,7 @@ int main()
 #endif
 
 
-int main()
+int _main()
 {
 	string s;
 	getline(cin, s);
@@ -116,4 +116,9 @@ int main()
 	system("pause");
 	return 0;
 }
-//ok
+ 
+int main()
+{
+	cout << "hello" << endl;
+	return 0;
+}
