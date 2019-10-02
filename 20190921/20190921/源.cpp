@@ -116,9 +116,16 @@ int _main()
 	system("pause");
 	return 0;
 }
+<<<<<<< HEAD
  
 int main()
 {
 	cout << "hello" << endl;
 	return 0;
 }
+=======
+<<<<<<< HEAD
+//ok
+=======
+>>>>>>> 0eeba4de1c6b0f3c2999a35cee1ca02c3326c8bb
+>>>>>>> ea0f34cd8b3541be6f39bb45a947196ecb9039fc
