@@ -63,11 +63,8 @@ int main()
 }
 #endif
 
-<<<<<<< HEAD
-#if 0
-=======
 
->>>>>>> 4c7836991e4cd026a94646733e0ce96cea094601
+#if 0
 //深拷贝的第二种实现方式，代码更简单但不好理解
 //申请一个与之相同的类对象并赋值，然后交换两个指针的指向
 class mine
@@ -316,7 +313,14 @@ public:
 			return _str;
 		}
 
-		size_t find(const string& str, size_t pos = 0) const;//查找
+		size_t find(const string& str, size_t pos = 0) const
+		{
+			if (_str == str.c_str)
+			{
+				return ;
+			}
+			return npos;
+		}//查找
 		size_t rfind(const string& str, size_t pos = npos) const;//后序查找
 
 
@@ -331,7 +335,7 @@ public:
 ostream & operator<<(ostream& _cout, string & s);
 
 
-#if 0
+
 int main()
 {
 	mine::string s1("hello");
@@ -341,7 +345,7 @@ int main()
 	return 0;
 	_CrtDumpMemoryLeaks();
 }
-#endif
+
 
 
 
@@ -357,9 +361,4 @@ int main()
 }
 #endif
 
-=======
-	mine::string s2 = s1;;
-	system("pause");
-	return 0;
-}
->>>>>>> 4c7836991e4cd026a94646733e0ce96cea094601
+
